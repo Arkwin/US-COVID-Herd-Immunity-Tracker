@@ -6,7 +6,7 @@ curl -sS 'https://covid.cdc.gov/covid-data-tracker/COVIDData/getAjaxData?id=US_M
 
 
 # Alaska Data
-AK_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[0].Doses_Administered')
+AK_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[0].Administered_Dose1')
 AK_inf=$(cat infected.json | jq -r '.US_MAP_DATA[0].tot_cases')
 AK_dead=$(cat infected.json | jq -r '.US_MAP_DATA[0].tot_death')
 AK_pop=731545
@@ -20,7 +20,7 @@ echo "Alaska herd immunity $AK_herd_percent%"
 
 # Alabama Data
 
-AL_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[1].Doses_Administered')
+AL_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[1].Administered_Dose1')
 AL_inf=$(cat infected.json | jq -r '.US_MAP_DATA[1].tot_cases')
 AL_dead=$(cat infected.json | jq -r '.US_MAP_DATA[1].tot_death')
 AL_pop=4903185
@@ -35,7 +35,7 @@ echo "Alabama herd immunity $AL_herd_percent%"
 
 # Arkansas Data
 
-AR_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[2].Doses_Administered')
+AR_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[2].Administered_Dose1')
 AR_inf=$(cat infected.json | jq -r '.US_MAP_DATA[2].tot_cases')
 AR_dead=$(cat infected.json | jq -r '.US_MAP_DATA[2].tot_death')
 AR_pop=3017804
@@ -49,7 +49,7 @@ echo "Arkansas herd immunity $AR_herd_percent%"
 
 
 # American Samoa 
-AS_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[3].Doses_Administered')
+AS_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[3].Administered_Dose1')
 AS_inf=$(cat infected.json | jq -r '.US_MAP_DATA[3].tot_cases')
 AS_dead=$(cat infected.json | jq -r '.US_MAP_DATA[3].tot_death')
 AS_pop=55312
@@ -62,7 +62,7 @@ AS_herd_percent=$(echo "$AS_herd_raw * 100" | bc | sed 's/..$//')
 echo "American Samoa herd immunity $AS_herd_percent%"
 
 # Arizona
-AZ_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[4].Doses_Administered')
+AZ_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[4].Administered_Dose1')
 AZ_inf=$(cat infected.json | jq -r '.US_MAP_DATA[4].tot_cases')
 AZ_dead=$(cat infected.json | jq -r '.US_MAP_DATA[4].tot_death')
 AZ_pop=7278717
@@ -75,7 +75,7 @@ AZ_herd_percent=$(echo "$AZ_herd_raw * 100" | bc | sed 's/..$//')
 echo "Arizona herd immunity $AZ_herd_percent%"
 
 # BoP
-BoP_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[5].Doses_Administered')
+BoP_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[5].Administered_Dose1')
 BoP_pop=173158
 
 BoP_recovered=46992
@@ -87,7 +87,7 @@ echo "Bureau of Prisons herd immunity $BoP_herd_percent%"
 
 
 # California 
-CA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[6].Doses_Administered')
+CA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[6].Administered_Dose1')
 CA_inf=$(cat infected.json | jq -r '.US_MAP_DATA[5].tot_cases')
 CA_dead=$(cat infected.json | jq -r '.US_MAP_DATA[5].tot_death')
 CA_pop=39512223
@@ -100,7 +100,7 @@ CA_herd_percent=$(echo "$CA_herd_raw * 100" | bc | sed 's/..$//')
 echo "California herd immunity $CA_herd_percent%"
 
 # Colorado
-CO_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[7].Doses_Administered')
+CO_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[7].Administered_Dose1')
 CO_inf=$(cat infected.json | jq -r '.US_MAP_DATA[6].tot_cases')
 CO_dead=$(cat infected.json | jq -r '.US_MAP_DATA[6].tot_death')
 CO_pop=5758736
@@ -113,7 +113,7 @@ CO_herd_percent=$(echo "$CO_herd_raw * 100" | bc | sed 's/..$//')
 echo "Colorado herd immunity $CO_herd_percent%"
 
 # Connecticut
-CT_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[8].Doses_Administered')
+CT_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[8].Administered_Dose1')
 CT_inf=$(cat infected.json | jq -r '.US_MAP_DATA[7].tot_cases')
 CT_dead=$(cat infected.json | jq -r '.US_MAP_DATA[7].tot_death')
 CT_pop=3565287
@@ -126,7 +126,7 @@ CT_herd_percent=$(echo "$CT_herd_raw * 100" | bc | sed 's/..$//')
 echo "Connecticut herd immunity $CT_herd_percent%"
 
 # District of Columbia
-DC_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[9].Doses_Administered')
+DC_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[9].Administered_Dose1')
 DC_inf=$(cat infected.json | jq -r '.US_MAP_DATA[8].tot_cases')
 DC_dead=$(cat infected.json | jq -r '.US_MAP_DATA[8].tot_death')
 DC_pop=705749
@@ -139,7 +139,7 @@ DC_herd_percent=$(echo "$DC_herd_raw * 100" | bc | sed 's/..$//')
 echo "District of Columbia herd immunity $DC_herd_percent%"
 
 # Department of Defense
-DoD_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[10].Doses_Administered')
+DoD_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[10].Administered_Dose1')
 DoD_pop=2800000
 
 DoD_recovered=140678
@@ -150,7 +150,7 @@ DoD_herd_percent=$(echo "$DoD_herd_raw * 100" | bc | sed 's/..$//')
 echo "Department of Defense herd immunity $DoD_herd_percent%"
 
 # Delaware
-DE_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[11].Doses_Administered')
+DE_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[11].Administered_Dose1')
 DE_inf=$(cat infected.json | jq -r '.US_MAP_DATA[9].tot_cases')
 DE_dead=$(cat infected.json | jq -r '.US_MAP_DATA[9].tot_death')
 DE_pop=973764
@@ -163,7 +163,7 @@ DE_herd_percent=$(echo "$DE_herd_raw * 100" | bc | sed 's/..$//')
 echo "Delaware herd immunity $DE_herd_percent%"
 
 # Florida
-FL_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[12].Doses_Administered')
+FL_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[12].Administered_Dose1')
 FL_inf=$(cat infected.json | jq -r '.US_MAP_DATA[10].tot_cases')
 FL_dead=$(cat infected.json | jq -r '.US_MAP_DATA[10].tot_death')
 FL_pop=21477737
@@ -177,7 +177,7 @@ echo "Florida herd immunity $FL_herd_percent%"
 
 
 # Federated States of Micronesia
-FSM_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[13].Doses_Administered')
+FSM_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[13].Administered_Dose1')
 FSM_inf=$(cat infected.json | jq -r '.US_MAP_DATA[11].tot_cases')
 FSM_dead=$(cat infected.json | jq -r '.US_MAP_DATA[11].tot_death')
 FSM_pop=113815
@@ -190,7 +190,7 @@ FSM_herd_percent=$(echo "$FSM_herd_raw * 100" | bc | sed 's/..$//')
 echo "Federated States of Micronesia herd immunity $FSM_herd_percent%"
 
 # Georgia
-GA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[14].Doses_Administered')
+GA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[14].Administered_Dose1')
 GA_inf=$(cat infected.json | jq -r '.US_MAP_DATA[12].tot_cases')
 GA_dead=$(cat infected.json | jq -r '.US_MAP_DATA[12].tot_death')
 GA_pop=10617423
@@ -203,7 +203,7 @@ GA_herd_percent=$(echo "$GA_herd_raw * 100" | bc | sed 's/..$//')
 echo "Georgia herd immunity $GA_herd_percent%"
 
 # Guam
-GU_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[15].Doses_Administered')
+GU_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[15].Administered_Dose1')
 GU_inf=$(cat infected.json | jq -r '.US_MAP_DATA[13].tot_cases')
 GU_dead=$(cat infected.json | jq -r '.US_MAP_DATA[13].tot_death')
 GU_pop=167294
@@ -216,7 +216,7 @@ GU_herd_percent=$(echo "$GU_herd_raw * 100" | bc | sed 's/..$//')
 echo "Guam herd immunity $GU_herd_percent%"
 
 # Hawaii
-HI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[16].Doses_Administered')
+HI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[16].Administered_Dose1')
 HI_inf=$(cat infected.json | jq -r '.US_MAP_DATA[14].tot_cases')
 HI_dead=$(cat infected.json | jq -r '.US_MAP_DATA[14].tot_death')
 HI_pop=1415872
@@ -229,7 +229,7 @@ HI_herd_percent=$(echo "$HI_herd_raw * 100" | bc | sed 's/..$//')
 echo "Hawaii herd immunity $HI_herd_percent%"
 
 # Iowa
-IA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[17].Doses_Administered')
+IA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[17].Administered_Dose1')
 IA_inf=$(cat infected.json | jq -r '.US_MAP_DATA[15].tot_cases')
 IA_dead=$(cat infected.json | jq -r '.US_MAP_DATA[15].tot_death')
 IA_pop=3155070
@@ -242,7 +242,7 @@ IA_herd_percent=$(echo "$IA_herd_raw * 100" | bc | sed 's/..$//')
 echo "Iowa herd immunity $IA_herd_percent%"
 
 # Idaho
-ID_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[18].Doses_Administered')
+ID_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[18].Administered_Dose1')
 ID_inf=$(cat infected.json | jq -r '.US_MAP_DATA[16].tot_cases')
 ID_dead=$(cat infected.json | jq -r '.US_MAP_DATA[16].tot_death')
 ID_pop=1787065
@@ -255,7 +255,7 @@ ID_herd_percent=$(echo "$ID_herd_raw * 100" | bc | sed 's/..$//')
 echo "Idaho herd immunity $ID_herd_percent%"
 
 # Native Americans 
-NA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[19].Doses_Administered')
+NA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[19].Administered_Dose1')
 NA_inf=176475
 NA_pop=2757000
 
@@ -267,7 +267,7 @@ NA_herd_percent=$(echo "$NA_herd_raw * 100" | bc | sed 's/..$//')
 echo "Indian Health Service herd immunity $NA_herd_percent%"
 
 # Illinois
-IL_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[20].Doses_Administered')
+IL_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[20].Administered_Dose1')
 IL_inf=$(cat infected.json | jq -r '.US_MAP_DATA[17].tot_cases')
 IL_dead=$(cat infected.json | jq -r '.US_MAP_DATA[17].tot_death')
 IL_pop=12671821
@@ -280,7 +280,7 @@ IL_herd_percent=$(echo "$IL_herd_raw * 100" | bc | sed 's/..$//')
 echo "Illinois herd immunity $IL_herd_percent%"
 
 # Indiana
-IN_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[21].Doses_Administered')
+IN_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[21].Administered_Dose1')
 IN_inf=$(cat infected.json | jq -r '.US_MAP_DATA[18].tot_cases')
 IN_dead=$(cat infected.json | jq -r '.US_MAP_DATA[18].tot_death')
 IN_pop=6732219
@@ -293,7 +293,7 @@ IN_herd_percent=$(echo "$IN_herd_raw * 100" | bc | sed 's/..$//')
 echo "Indiana herd immunity $IN_herd_percent%"
 
 # Kansas
-KS_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[22].Doses_Administered')
+KS_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[22].Administered_Dose1')
 KS_inf=$(cat infected.json | jq -r '.US_MAP_DATA[19].tot_cases')
 KS_dead=$(cat infected.json | jq -r '.US_MAP_DATA[19].tot_death')
 KS_pop=2913314
@@ -306,7 +306,7 @@ KS_herd_percent=$(echo "$KS_herd_raw * 100" | bc | sed 's/..$//')
 echo "Kanas herd immunity $KS_herd_percent%"
 
 # Kentucky
-KY_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[23].Doses_Administered')
+KY_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[23].Administered_Dose1')
 KY_inf=$(cat infected.json | jq -r '.US_MAP_DATA[20].tot_cases')
 KY_dead=$(cat infected.json | jq -r '.US_MAP_DATA[20].tot_death')
 KY_pop=4467673
@@ -319,7 +319,7 @@ KY_herd_percent=$(echo "$KY_herd_raw * 100" | bc | sed 's/..$//')
 echo "Kentucky herd immunity $KY_herd_percent%"
 
 # Louisiana
-LA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[24].Doses_Administered')
+LA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[24].Administered_Dose1')
 LA_inf=$(cat infected.json | jq -r '.US_MAP_DATA[21].tot_cases')
 LA_dead=$(cat infected.json | jq -r '.US_MAP_DATA[21].tot_death')
 LA_pop=4648794
@@ -332,7 +332,7 @@ LA_herd_percent=$(echo "$LA_herd_raw * 100" | bc | sed 's/..$//')
 echo "Louisana herd immunity $LA_herd_percent%"
 
 # Massachusetts
-MA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[25].Doses_Administered')
+MA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[25].Administered_Dose1')
 MA_inf=$(cat infected.json | jq -r '.US_MAP_DATA[22].tot_cases')
 MA_dead=$(cat infected.json | jq -r '.US_MAP_DATA[22].tot_death')
 MA_pop=6892503
@@ -345,7 +345,7 @@ MA_herd_percent=$(echo "$MA_herd_raw * 100" | bc | sed 's/..$//')
 echo "Massachusetts herd immunity $MA_herd_percent%"
 
 # Maryland
-MD_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[26].Doses_Administered')
+MD_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[26].Administered_Dose1')
 MD_inf=$(cat infected.json | jq -r '.US_MAP_DATA[23].tot_cases')
 MD_dead=$(cat infected.json | jq -r '.US_MAP_DATA[23].tot_death')
 MD_pop=6045680
@@ -359,7 +359,7 @@ echo "Maryland herd immunity $MD_herd_percent%"
 
 
 # Maine
-ME_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[27].Doses_Administered')
+ME_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[27].Administered_Dose1')
 ME_inf=$(cat infected.json | jq -r '.US_MAP_DATA[24].tot_cases')
 ME_dead=$(cat infected.json | jq -r '.US_MAP_DATA[24].tot_death')
 ME_pop=1344212
@@ -372,7 +372,7 @@ ME_herd_percent=$(echo "$ME_herd_raw * 100" | bc | sed 's/..$//')
 echo "Maine herd immunity $ME_herd_percent%"
 
 # Marshall Islands
-MIS_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[28].Doses_Administered')
+MIS_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[28].Administered_Dose1')
 MIS_inf=$(cat infected.json | jq -r '.US_MAP_DATA[47].tot_cases')
 MIS_dead=$(cat infected.json | jq -r '.US_MAP_DATA[47].tot_death')
 MIS_pop=58413
@@ -386,7 +386,7 @@ echo "Marshall Islands herd immunity $MIS_herd_percent%"
 
 
 # Michigan
-MI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[29].Doses_Administered')
+MI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[29].Administered_Dose1')
 MI_inf=$(cat infected.json | jq -r '.US_MAP_DATA[25].tot_cases')
 MI_dead=$(cat infected.json | jq -r '.US_MAP_DATA[25].tot_death')
 MI_pop=9986857
@@ -399,7 +399,7 @@ MI_herd_percent=$(echo "$MI_herd_raw * 100" | bc | sed 's/..$//')
 echo "Michigan herd immunity $MI_herd_percent%"
 
 # Minnesota
-MN_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[30].Doses_Administered')
+MN_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[30].Administered_Dose1')
 MN_inf=$(cat infected.json | jq -r '.US_MAP_DATA[26].tot_cases')
 MN_dead=$(cat infected.json | jq -r '.US_MAP_DATA[26].tot_death')
 MN_pop=5639632
@@ -412,7 +412,7 @@ MN_herd_percent=$(echo "$MN_herd_raw * 100" | bc | sed 's/..$//')
 echo "Minnesota herd immunity $MN_herd_percent%"
 
 # Missouri
-MO_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[31].Doses_Administered')
+MO_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[31].Administered_Dose1')
 MO_inf=$(cat infected.json | jq -r '.US_MAP_DATA[27].tot_cases')
 MO_dead=$(cat infected.json | jq -r '.US_MAP_DATA[27].tot_death')
 MO_pop=6137428
@@ -425,7 +425,7 @@ MO_herd_percent=$(echo "$MO_herd_raw * 100" | bc | sed 's/..$//')
 echo "Missouri herd immunity $MO_herd_percent%"
 
 # Northern Mariana Islands
-NMI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[32].Doses_Administered')
+NMI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[32].Administered_Dose1')
 NMI_inf=$(cat infected.json | jq -r '.US_MAP_DATA[28].tot_cases')
 NMI_dead=$(cat infected.json | jq -r '.US_MAP_DATA[28].tot_death')
 NMI_pop=56882
@@ -438,7 +438,7 @@ NMI_herd_percent=$(echo "$NMI_herd_raw * 100" | bc | sed 's/..$//')
 echo "Northern Mariana Islands herd immunity $NMI_herd_percent%"
 
 # Mississippi
-MS_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[33].Doses_Administered')
+MS_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[33].Administered_Dose1')
 MS_inf=$(cat infected.json | jq -r '.US_MAP_DATA[29].tot_cases')
 MS_dead=$(cat infected.json | jq -r '.US_MAP_DATA[29].tot_death')
 MS_pop=2976149
@@ -451,7 +451,7 @@ MS_herd_percent=$(echo "$MS_herd_raw * 100" | bc | sed 's/..$//')
 echo "Mississippi herd immunity $MS_herd_percent%"
 
 # Montana
-MT_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[34].Doses_Administered')
+MT_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[34].Administered_Dose1')
 MT_inf=$(cat infected.json | jq -r '.US_MAP_DATA[30].tot_cases')
 MT_dead=$(cat infected.json | jq -r '.US_MAP_DATA[30].tot_death')
 MT_pop=1068778
@@ -465,7 +465,7 @@ echo "Montana herd immunity $MT_herd_percent%"
 
 
 # North Carolina
-NC_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[35].Doses_Administered')
+NC_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[35].Administered_Dose1')
 NC_inf=$(cat infected.json | jq -r '.US_MAP_DATA[31].tot_cases')
 NC_dead=$(cat infected.json | jq -r '.US_MAP_DATA[31].tot_death')
 NC_pop=10488084
@@ -478,7 +478,7 @@ NC_herd_percent=$(echo "$NC_herd_raw * 100" | bc | sed 's/..$//')
 echo "North Carolina herd immunity $NC_herd_percent%"
 
 # North Dakota
-ND_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[36].Doses_Administered')
+ND_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[36].Administered_Dose1')
 ND_inf=$(cat infected.json | jq -r '.US_MAP_DATA[32].tot_cases')
 ND_dead=$(cat infected.json | jq -r '.US_MAP_DATA[32].tot_death')
 ND_pop=762062
@@ -491,7 +491,7 @@ ND_herd_percent=$(echo "$ND_herd_raw * 100" | bc | sed 's/..$//')
 echo "North Dakota herd immunity $ND_herd_percent%"
 
 # Nebraska
-NE_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[37].Doses_Administered')
+NE_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[37].Administered_Dose1')
 NE_inf=$(cat infected.json | jq -r '.US_MAP_DATA[33].tot_cases')
 NE_dead=$(cat infected.json | jq -r '.US_MAP_DATA[33].tot_death')
 NE_pop=1934408
@@ -504,7 +504,7 @@ NE_herd_percent=$(echo "$NE_herd_raw * 100" | bc | sed 's/..$//')
 echo "Nebraska herd immunity $NE_herd_percent%"
 
 # New Hampshire
-NH_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[38].Doses_Administered')
+NH_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[38].Administered_Dose1')
 NH_inf=$(cat infected.json | jq -r '.US_MAP_DATA[34].tot_cases')
 NH_dead=$(cat infected.json | jq -r '.US_MAP_DATA[34].tot_death')
 NH_pop=1359711
@@ -517,7 +517,7 @@ NH_herd_percent=$(echo "$NH_herd_raw * 100" | bc | sed 's/..$//')
 echo "New Nampshire herd immunity $NH_herd_percent%"
 
 # New Jersey
-NJ_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[39].Doses_Administered')
+NJ_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[39].Administered_Dose1')
 NJ_inf=$(cat infected.json | jq -r '.US_MAP_DATA[35].tot_cases')
 NJ_dead=$(cat infected.json | jq -r '.US_MAP_DATA[35].tot_death')
 NJ_pop=8882190
@@ -530,7 +530,7 @@ NJ_herd_percent=$(echo "$NJ_herd_raw * 100" | bc | sed 's/..$//')
 echo "New Jersey herd immunity $NJ_herd_percent%"
 
 # New Mexico
-NM_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[40].Doses_Administered')
+NM_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[40].Administered_Dose1')
 NM_inf=$(cat infected.json | jq -r '.US_MAP_DATA[36].tot_cases')
 NM_dead=$(cat infected.json | jq -r '.US_MAP_DATA[36].tot_death')
 NM_pop=2096829
@@ -543,7 +543,7 @@ NM_herd_percent=$(echo "$NM_herd_raw * 100" | bc | sed 's/..$//')
 echo "New Mexico herd immunity $NM_herd_percent%"
 
 # Nevada
-NV_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[41].Doses_Administered')
+NV_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[41].Administered_Dose1')
 NV_inf=$(cat infected.json | jq -r '.US_MAP_DATA[37].tot_cases')
 NV_dead=$(cat infected.json | jq -r '.US_MAP_DATA[37].tot_death')
 NV_pop=3080156
@@ -556,7 +556,7 @@ NV_herd_percent=$(echo "$NV_herd_raw * 100" | bc | sed 's/..$//')
 echo "Nevada herd immunity $NV_herd_percent%"
 
 # New York
-NY_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[42].Doses_Administered')
+NY_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[42].Administered_Dose1')
 NYS_inf=$(cat infected.json | jq -r '.US_MAP_DATA[38].tot_cases')
 NYS_dead=$(cat infected.json | jq -r '.US_MAP_DATA[38].tot_death')
 NYC_inf=$(cat infected.json | jq -r '.US_MAP_DATA[39].tot_cases')
@@ -574,7 +574,7 @@ NY_herd_percent=$(echo "$NY_herd_raw * 100" | bc | sed 's/..$//')
 echo "New York herd immunity $NY_herd_percent%"
 
 # Ohio
-OH_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[43].Doses_Administered')
+OH_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[43].Administered_Dose1')
 OH_inf=$(cat infected.json | jq -r '.US_MAP_DATA[40].tot_cases')
 OH_dead=$(cat infected.json | jq -r '.US_MAP_DATA[40].tot_death')
 OH_pop=11689100
@@ -587,7 +587,7 @@ OH_herd_percent=$(echo "$OH_herd_raw * 100" | bc | sed 's/..$//')
 echo "Ohio herd immunity $OH_herd_percent%"
 
 # Oklahoma
-OK_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[44].Doses_Administered')
+OK_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[44].Administered_Dose1')
 OK_inf=$(cat infected.json | jq -r '.US_MAP_DATA[41].tot_cases')
 OK_dead=$(cat infected.json | jq -r '.US_MAP_DATA[41].tot_death')
 OK_pop=3956971
@@ -600,7 +600,7 @@ OK_herd_percent=$(echo "$OK_herd_raw * 100" | bc | sed 's/..$//')
 echo "Oklahoma herd immunity $OK_herd_percent%"
 
 # Oregon
-OR_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[45].Doses_Administered')
+OR_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[45].Administered_Dose1')
 OR_inf=$(cat infected.json | jq -r '.US_MAP_DATA[42].tot_cases')
 OR_dead=$(cat infected.json | jq -r '.US_MAP_DATA[42].tot_death')
 OR_pop=4217737
@@ -613,7 +613,7 @@ OR_herd_percent=$(echo "$OR_herd_raw * 100" | bc | sed 's/..$//')
 echo "Oregon herd immunity $OR_herd_percent%"
 
 # Pennsylvania
-PA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[46].Doses_Administered')
+PA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[46].Administered_Dose1')
 PA_inf=$(cat infected.json | jq -r '.US_MAP_DATA[43].tot_cases')
 PA_dead=$(cat infected.json | jq -r '.US_MAP_DATA[43].tot_death')
 PA_pop=12801989
@@ -626,7 +626,7 @@ PA_herd_percent=$(echo "$PA_herd_raw * 100" | bc | sed 's/..$//')
 echo "Pennsylvania herd immunity $PA_herd_percent%"
 
 # Puerto Rico
-PR_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[47].Doses_Administered')
+PR_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[47].Administered_Dose1')
 PR_inf=$(cat infected.json | jq -r '.US_MAP_DATA[44].tot_cases')
 PR_dead=$(cat infected.json | jq -r '.US_MAP_DATA[44].tot_death')
 PR_pop=3193694
@@ -639,7 +639,7 @@ PR_herd_percent=$(echo "$PR_herd_raw * 100" | bc | sed 's/..$//')
 echo "Puerto Rico herd immunity $PR_herd_percent%"
 
 # Republic of Palau
-PU_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[49].Doses_Administered')
+PU_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[49].Administered_Dose1')
 PU_inf=$(cat infected.json | jq -r '.US_MAP_DATA[45].tot_cases')
 PU_dead=$(cat infected.json | jq -r '.US_MAP_DATA[45].tot_death')
 PU_pop=17907
@@ -652,7 +652,7 @@ PU_herd_percent=$(echo "$PU_herd_raw * 100" | bc | sed 's/..$//')
 echo "Republic of Palau herd immunity $PU_herd_percent%"
 
 # Rhode Island
-RI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[48].Doses_Administered')
+RI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[48].Administered_Dose1')
 RI_inf=$(cat infected.json | jq -r '.US_MAP_DATA[46].tot_cases')
 RI_dead=$(cat infected.json | jq -r '.US_MAP_DATA[46].tot_death')
 RI_pop=1059361
@@ -665,7 +665,7 @@ RI_herd_percent=$(echo "$RI_herd_raw * 100" | bc | sed 's/..$//')
 echo "Rhode Island herd immunity $RI_herd_percent%"
 
 # South Carolina
-SC_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[50].Doses_Administered')
+SC_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[50].Administered_Dose1')
 SC_inf=$(cat infected.json | jq -r '.US_MAP_DATA[48].tot_cases')
 SC_dead=$(cat infected.json | jq -r '.US_MAP_DATA[48].tot_death')
 SC_pop=5148714
@@ -678,7 +678,7 @@ SC_herd_percent=$(echo "$SC_herd_raw * 100" | bc | sed 's/..$//')
 echo "South Carolina herd immunity $SC_herd_percent%"
 
 # South Dakota
-SD_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[51].Doses_Administered')
+SD_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[51].Administered_Dose1')
 SD_inf=$(cat infected.json | jq -r '.US_MAP_DATA[49].tot_cases')
 SD_dead=$(cat infected.json | jq -r '.US_MAP_DATA[49].tot_death')
 SD_pop=884659
@@ -692,7 +692,7 @@ echo "South Dakota herd immunity $SD_herd_percent%"
 
 
 # Tennessee
-TN_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[52].Doses_Administered')
+TN_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[52].Administered_Dose1')
 TN_inf=$(cat infected.json | jq -r '.US_MAP_DATA[50].tot_cases')
 TN_dead=$(cat infected.json | jq -r '.US_MAP_DATA[50].tot_death')
 TN_pop=6829174
@@ -705,7 +705,7 @@ TN_herd_percent=$(echo "$TN_herd_raw * 100" | bc | sed 's/..$//')
 echo "Tennessee herd immunity $TN_herd_percent%"
 
 # Texas
-TX_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[53].Doses_Administered')
+TX_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[53].Administered_Dose1')
 TX_inf=$(cat infected.json | jq -r '.US_MAP_DATA[51].tot_cases')
 TX_dead=$(cat infected.json | jq -r '.US_MAP_DATA[51].tot_death')
 TX_pop=28995881
@@ -718,7 +718,7 @@ TX_herd_percent=$(echo "$TX_herd_raw * 100" | bc | sed 's/..$//')
 echo "Texas herd immunity $TX_herd_percent%"
 
 # Utah
-UT_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[54].Doses_Administered')
+UT_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[54].Administered_Dose1')
 UT_inf=$(cat infected.json | jq -r '.US_MAP_DATA[52].tot_cases')
 UT_dead=$(cat infected.json | jq -r '.US_MAP_DATA[52].tot_death')
 UT_pop=3205958
@@ -731,7 +731,7 @@ UT_herd_percent=$(echo "$UT_herd_raw * 100" | bc | sed 's/..$//')
 echo "Utah herd immunity $UT_herd_percent%"
 
 # Virginia
-VA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[55].Doses_Administered')
+VA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[55].Administered_Dose1')
 VA_inf=$(cat infected.json | jq -r '.US_MAP_DATA[53].tot_cases')
 VA_dead=$(cat infected.json | jq -r '.US_MAP_DATA[53].tot_death')
 VA_pop=8535519
@@ -744,7 +744,7 @@ VA_herd_percent=$(echo "$VA_herd_raw * 100" | bc | sed 's/..$//')
 echo "Virginia herd immunity $VA_herd_percent%"
 
 # Virgin Islands
-VI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[57].Doses_Administered')
+VI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[57].Administered_Dose1')
 VI_inf=$(cat infected.json | jq -r '.US_MAP_DATA[54].tot_cases')
 VI_dead=$(cat infected.json | jq -r '.US_MAP_DATA[54].tot_death')
 VI_pop=104680
@@ -757,7 +757,7 @@ VI_herd_percent=$(echo "$VI_herd_raw * 100" | bc | sed 's/..$//')
 echo "Virgin Islands herd immunity $VI_herd_percent%"
 
 # Vermont
-VT_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[58].Doses_Administered')
+VT_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[58].Administered_Dose1')
 VT_inf=$(cat infected.json | jq -r '.US_MAP_DATA[55].tot_cases')
 VT_dead=$(cat infected.json | jq -r '.US_MAP_DATA[55].tot_death')
 VT_pop=623989
@@ -770,7 +770,7 @@ VT_herd_percent=$(echo "$VT_herd_raw * 100" | bc | sed 's/..$//')
 echo "Vermont herd immunity $VT_herd_percent%"
 
 # Washington
-WA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[59].Doses_Administered')
+WA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[59].Administered_Dose1')
 WA_inf=$(cat infected.json | jq -r '.US_MAP_DATA[56].tot_cases')
 WA_dead=$(cat infected.json | jq -r '.US_MAP_DATA[56].tot_death')
 WA_pop=7614893
@@ -783,7 +783,7 @@ WA_herd_percent=$(echo "$WA_herd_raw * 100" | bc | sed 's/..$//')
 echo "Washington herd immunity $WA_herd_percent%"
 
 # Wisconsin
-WI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[60].Doses_Administered')
+WI_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[60].Administered_Dose1')
 WI_inf=$(cat infected.json | jq -r '.US_MAP_DATA[57].tot_cases')
 WI_dead=$(cat infected.json | jq -r '.US_MAP_DATA[57].tot_death')
 WI_pop=5822434
@@ -796,7 +796,7 @@ WI_herd_percent=$(echo "$WI_herd_raw * 100" | bc | sed 's/..$//')
 echo "Wisconsin herd immunity $WI_herd_percent%"
 
 # West Virginia
-WV_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[61].Doses_Administered')
+WV_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[61].Administered_Dose1')
 WV_inf=$(cat infected.json | jq -r '.US_MAP_DATA[58].tot_cases')
 WV_dead=$(cat infected.json | jq -r '.US_MAP_DATA[58].tot_death')
 WV_pop=1792147
@@ -809,7 +809,7 @@ WV_herd_percent=$(echo "$WV_herd_raw * 100" | bc | sed 's/..$//')
 echo "West Virginia herd immunity $WV_herd_percent%"
 
 # Wyoming
-WY_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[62].Doses_Administered')
+WY_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[62].Administered_Dose1')
 WY_inf=$(cat infected.json | jq -r '.US_MAP_DATA[59].tot_cases')
 WY_dead=$(cat infected.json | jq -r '.US_MAP_DATA[59].tot_death')
 WY_pop=578759
@@ -822,7 +822,7 @@ WY_herd_percent=$(echo "$WY_herd_raw * 100" | bc | sed 's/..$//')
 echo "Wyoming herd immunity $WY_herd_percent%"
 
 # USA
-US_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[63].Doses_Administered')
+US_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[63].Administered_Dose1')
 US_inf=$(cat infected.json | jq -r '.US_MAP_DATA[60].tot_cases')
 US_dead=$(cat infected.json | jq -r '.US_MAP_DATA[60].tot_death')
 US_pop=331996199
@@ -844,5 +844,3 @@ echo "Writing to CSV file"
 echo "$Date,$AK_herd_percent,$AL_herd_percent,$AR_herd_percent,$AS_herd_percent,$AZ_herd_percent,$BoP_herd_percent,$CA_herd_percent,$CO_herd_percent,$CT_herd_percent,$DC_herd_percent,$DoD_herd_percent,$DE_herd_percent,$FL_herd_percent,$FSM_herd_percent,$GA_herd_percent,$GU_herd_percent,$HI_herd_percent,$IA_herd_percent,$ID_herd_percent,$NA_herd_percent,$IL_herd_percent,$IN_herd_percent,$KS_herd_percent,$KY_herd_percent,$LA_herd_percent,$MA_herd_percent,$MD_herd_percent,$ME_herd_percent,$MIS_herd_percent,$MI_herd_percent,$MN_herd_percent,$MO_herd_percent,$NMI_herd_percent,$MS_herd_percent,$MT_herd_percent,$NC_herd_percent,$ND_herd_percent,$NE_herd_percent,$NH_herd_percent,$NJ_herd_percent,$NM_herd_percent,$NV_herd_percent,$NY_herd_percent,$OH_herd_percent,$OK_herd_percent,$OR_herd_percent,$PA_herd_percent,$PR_herd_percent,$PU_herd_percent,$RI_herd_percent,$SC_herd_percent,$TN_herd_percent,$TX_herd_percent,$UT_herd_percent,$VA_herd_percent,$VI_herd_percent,$VT_herd_percent,$WA_herd_percent,$WI_herd_percent,$WV_herd_percent,$WY_herd_percent,$US_herd_percent" >> data.csv
 
 exit 0
-
-

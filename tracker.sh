@@ -514,7 +514,7 @@ NH_herd=$(($NH_recovered + $NH_vac))
 NH_herd_raw=$(echo "scale=4 ; $NH_herd / $NH_pop" | bc)
 NH_herd_percent=$(echo "$NH_herd_raw * 100" | bc | sed 's/..$//')
 
-echo "New Nampshire herd immunity $NH_herd_percent%"
+echo "New Hampshire herd immunity $NH_herd_percent%"
 
 # New Jersey
 NJ_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[39].Administered_Dose1')

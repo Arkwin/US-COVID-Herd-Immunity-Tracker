@@ -303,7 +303,7 @@ KS_herd=$(($KS_recovered + $KS_vac))
 KS_herd_raw=$(echo "scale=4 ; $KS_herd / $KS_pop" | bc)
 KS_herd_percent=$(echo "$KS_herd_raw * 100" | bc | sed 's/..$//')
 
-echo "Kanas herd immunity $KS_herd_percent%"
+echo "Kansas herd immunity $KS_herd_percent%"
 
 # Kentucky
 KY_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[23].Administered_Dose1')
@@ -329,7 +329,7 @@ LA_herd=$(($LA_recovered + $LA_vac))
 LA_herd_raw=$(echo "scale=4 ; $LA_herd / $LA_pop" | bc)
 LA_herd_percent=$(echo "$LA_herd_raw * 100" | bc | sed 's/..$//')
 
-echo "Louisana herd immunity $LA_herd_percent%"
+echo "Louisiana herd immunity $LA_herd_percent%"
 
 # Massachusetts
 MA_vac=$(cat vaccine_data.json | jq -r '.vaccination_data[25].Administered_Dose1')

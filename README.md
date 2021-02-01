@@ -7,9 +7,9 @@ The project goal is to track the herd immunity of the US population. Instead of 
 
 ### Built With
 
-* [bash]()
-* [cURL]()
-* [jq]()
+* bash
+* cURL
+* jq
 
 
 
@@ -51,7 +51,7 @@ Only function is running tracker.sh
 <!-- ROADMAP -->
 ## Roadmap
 
-Make the script post to twitter.
+Script is pretty much done for what it is. I will most likely feed this data into visualization software. 
 
 
 <!-- LICENSE -->

@@ -1,12 +1,12 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## UPDATE 09MAR21
 
 CDC changed how their JSON looks, so there will be no more updates! It was fun while it lasted!
 
 
-
+## About The Project
 The project goal is to track the herd immunity of the US population. Instead of looking at just vaccination numbers, it also looks at people who have recovered from COVID as well. This is just a general script with some basic math and does not take into account recovered people who have also received a vaccination. 
 
 ### Built With
